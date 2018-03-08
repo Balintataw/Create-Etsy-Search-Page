@@ -5,7 +5,7 @@
   }
 
 * {
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid black;
 }
 
@@ -143,4 +143,33 @@ nav {
 
 .nav-item:hover {
     border-bottom: 3px solid #F56400;
+}
+
+        /* guided nav buttons */
+
+.guided-search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+    height: 60px;
+    width: 100%;
+}
+
+.guided-search-button {
+    background-color: rgb(250, 181, 117);
+    border: 1px solid rgb(214, 143, 76);
+    padding: 10px 13px;
+    margin: 0 5px;
+    border-radius: 3px;
+}
+
+.guided-search-button a {
+    text-decoration: none;
+    color: rgb(96, 96, 96);
+    font-size: 0.8rem;
+}
+
+.lighter {
+    background-color: rgb(253, 206, 161);
 }
