@@ -3,6 +3,72 @@
 * {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    border: 1px solid black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header styles */
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+}
+
+.header-left {
+    display: flex;
+    color: #f45800;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    padding-right: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    width: 550px;
+    height: 35px;
+}
+
+#search-field {
+    flex-grow: 2;
+    border: 1px solid rgb(182, 181, 181);
+    border-radius: 3px;
+    outline: 0;
+}
+
+#btn-search {
+    background: #f56400;
+    width: 80px;
+    outline: 0;
+    margin-left: -2px;
+    color: #FFF;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.account {
+    display: flex;
+}
+
+#cart {
+    position: relative;
+}
+
+#cart:before {
+    position: absolute;
+    background-image: url(src="./assets/cart.png")
+}

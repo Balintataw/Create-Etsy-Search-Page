@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Et-C</title>
+    <link rel="icon" type="image/png" href="./assets/etsy_logo.png" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -12,8 +13,31 @@
 <body>
     <div class="container">
         <header>
-            <div class="search"></div>
-            <nav></nav>
+            <div class="header-top">
+                <div class="header-left">
+                    <span class="logo">Etsy</span>
+                    <form>
+                        <input id="search-field" name="search" type="text">
+                        <button id="btn-search" type="submit" placeholder="Search">Search</button>
+                    </form>
+                </div>
+                <ul class="account">
+                    <li class="sell-on-etsy">
+                        <a id="sell-on-etsy" href="https://www.etsy.com/sell?ref=hdr&from_page=https%3A%2F%2Fwww.etsy.com%2Fsearch">Sell on Etsy</a>
+                    </li>
+                    <li class="register">
+                        <a id="register" href="https://www.etsy.com/join?ref=hdr&from_page=https%3A%2F%2Fwww.etsy.com%2Fsearch">Register</a>
+                    </li>
+                    <li class="sign-in">
+                        <a id="sign-in" href="https://www.etsy.com/signin?ref=hdr&from_action=signin-header&from_page=https%3A%2F%2Fwww.etsy.com%2Fsearch">Sign in</a>
+                    </li>
+                    <li class="cart">
+                        
+                        <a id="cart" href="#">Cart</a>
+                    </li>
+                </ul>
+            </div>
+            <nav ></nav>
         </header>
     </div>
 
