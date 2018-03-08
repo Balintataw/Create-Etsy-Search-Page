@@ -1,7 +1,10 @@
 /* Universal styles */
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('../assets/DroidSans.ttf') format('truetype');
+  }
 
 * {
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     border: 1px solid black;
 }
@@ -9,9 +12,12 @@
 .container {
     display: flex;
     flex-direction: column;
+    font-family: 'Droid Sans', sans-serif;
 }
 
 /* Header styles */
+
+        /* header top */
 
 header {
     display: flex;
@@ -33,6 +39,7 @@ header {
 }
 
 .logo {
+    font-family: serif;
     font-size: 2.5rem;
     padding-right: 25px;
 }
@@ -74,7 +81,7 @@ form {
 #sign-in {
     border: 1px solid #f56400;
     border-radius: 3px;
-    padding: 8px 8px;
+    padding: 7px 9px;
 }
 
 #cart {
@@ -103,4 +110,37 @@ form {
     height: 44px;
     top: -28px;
     right: 44px;
+}
+
+        /* header nav */
+
+nav {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    border-bottom: 1px solid rgb(182, 181, 181);
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-item {
+    display: block;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item a {
+    display: flex;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 10px 10px;
+    color: rgb(96, 96, 96);
+}
+
+.nav-item:hover {
+    border-bottom: 3px solid #F56400;
 }
