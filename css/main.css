@@ -227,6 +227,93 @@ nav {
 
         /* product feed styles */
 
+.item-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .product-results-feed {
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-item-wrapper {
+    width: 23%;
+}
+
+.product-item-wrapper a {
+    text-decoration: none;
+    color:  rgb(181, 181, 181);
+}
+
+.item-image {
+    width: 100%
+}
+
+.product-name {
+    font-size: 0.8rem;
+    color: rgb(96, 96, 96);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 7px 0;
+}
+
+.product-maker {
+    font-size: 0.7rem;
+    padding-bottom: 5px;
+}
+
+.product-rating {
+    font-size: 0.7rem;
+    padding-bottom: 5px;
+}
+
+.favorers {
+    padding-left: 5px;
+}
+
+.product-price {
+    font-size: 0.9rem;
+    color: rgb(96, 96, 96);
+    padding-bottom: 5px;
+}
+
+        /* star rating */
+
+.rating {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.rating-input {
+    float: right;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 0 0 -16px;
+    opacity: 0;
+}
+
+.rating-star,
+.rating:hover .rating-star {
+    cursor: pointer;
+    position: relative;
+    float: right;
+    display: block;
+    width: 14px;
+    height: 15px;
+    background: url('../assets/empty_star.png') 0 -16px;
+    background-size: cover;
+}
+
+.rating:hover .rating-star:hover,
+.rating:hover .rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+    background-position: 0 0;
+    background: url('../assets/full_star.png') 0 -16px;
+    background-size: cover;
 }
