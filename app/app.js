@@ -36,9 +36,9 @@ $(document).ready(function () {
                             <div class="product-price">$${item.price}<span class="ship-info"></span></div>
                         </a>
                     </div>`
-        }).forEach(item => bollocks.innerHTML += item);
-        // alert(productData);
-        // resultsBar.innerHTML = `${searchTerm} (${productData.length})`;
+        })
+        productData.forEach(item => bollocks.innerHTML += item);
+        resultsBar.innerHTML = `${searchTerm} (${productData.length})`;
     }
 
 // -------------Header Search bar functionality
@@ -47,18 +47,26 @@ $(document).ready(function () {
     
     $('#header-search').submit(function(e) {
         e.preventDefault();
-        $('.product-item-wrapper').empty();
-        // alert(searchTerm);
-        $('#header-search')[0].reset();
         search(searchTerm);
+        $('#header-search')[0].reset();
     })
-
+    
     var search = function(searchTerm) {
+        var searchTerm = document.querySelector('#search-field').value;
         var searchData = items.results.filter(item => {
+            // console.log(searchTerm)
             if (item.title.indexOf(searchTerm) > -1) {
-                return item;
+                return true
+            } else {
+                return false
             }
         })
+
+        // console.log(searchData.length)
+
+        $('#products').empty();
+        
+        // console.log(searchData);
         populateProducts(searchData)
     }
 
