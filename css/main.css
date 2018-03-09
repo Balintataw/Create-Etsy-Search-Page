@@ -173,3 +173,60 @@ nav {
 .lighter {
     background-color: rgb(253, 206, 161);
 }
+
+/* products styles */
+
+.product-wrapper {
+    display: flex;
+}
+
+        /* sidebar styles */
+
+.sidebar {
+    display: flex;
+    width: 15%;
+    height: 1570px;
+    border: 1px solid rgb(181, 181, 181);
+}
+
+#sidebar-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar-form div {
+    padding: 10px;
+    border-bottom: 1px solid rgb(181, 181, 181);
+}
+
+.sidebar-button {
+    border: none;
+}
+
+.all li {
+    padding-left: 10px;
+}
+
+#btn-location {
+    height: 22px;
+    width: 22px;
+    position: relative;
+}
+
+#btn-location:before {
+    position: absolute;
+    content: '';
+    top: 3px;
+    right: 4px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7.5px 0 7.5px 10px;
+    border-color: transparent transparent transparent rgb(181, 181, 181);
+}
+
+        /* product feed styles */
+
+.product-results-feed {
+    display: flex;
+}
