@@ -2,6 +2,9 @@ $(document).ready(function () {
 
 //------------Creates initial product listing
     var bollocks = document.querySelector('#products');
+    var searchTerm = document.querySelector('#search-field').value;
+    var resultsBar = document.querySelector('#results');
+    
 
     function populateProducts(array) {
         var productData = array.map(item => {
@@ -34,7 +37,8 @@ $(document).ready(function () {
                         </a>
                     </div>`
         }).forEach(item => bollocks.innerHTML += item);
-        
+        // alert(productData);
+        // resultsBar.innerHTML = `${searchTerm} (${productData.length})`;
     }
 
 // -------------Header Search bar functionality
@@ -44,7 +48,6 @@ $(document).ready(function () {
     $('#header-search').submit(function(e) {
         e.preventDefault();
         $('.product-item-wrapper').empty();
-        var searchTerm = document.querySelector('#search-field').value;
         // alert(searchTerm);
         $('#header-search')[0].reset();
         search(searchTerm);
@@ -63,4 +66,8 @@ $(document).ready(function () {
 populateProducts(items.results);
 
 });
+
+//--------------product results bar
+
+
 
