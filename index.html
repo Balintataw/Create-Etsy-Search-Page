@@ -16,8 +16,8 @@
             <div class="header-top">
                 <div class="header-left">
                     <span class="logo">Etsy</span>
-                    <form>
-                        <input id="search-field" name="search" type="text">
+                    <form id="header-search">
+                        <input id="search-field" name="search" type="text" onsubmit="search(this)">
                         <button id="btn-search" type="submit" placeholder="Search">Search</button>
                     </form>
                 </div>
@@ -219,8 +219,74 @@
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="related-items">related items section</div>
+
+        <div class="recently-viewed">recently viewed section</div>
+
+        <footer>
+            <div class="footer-info">
+                <div class="footer-email">
+                    <div class="subscribe-title">Get fresh Etsy trends and unique gift ideas delivered right to your inbox</div>                    
+                </div>
+                <form id="footer-subscribe">
+                        <input id="sub-field" name="subscribe" type="text" placeholder="Enter your email">
+                        <button id="btn-search" type="submit" placeholder="Search">Subscribe</button>
+                    </form>
+                <div class="footer-nav">
+                    <div class="footer nav shop">
+                        <ul><a href="#">Shop</a>
+                            <a href="https://www.etsy.com/giftcards?ref=ftr"><li>Gift card</li></a>
+                            <a href="https://www.etsy.com/blog/en/?ref=ftr"><li>Etsy blog</li></a>
+                            <a href="https://www.etsy.com/wholesale?ref=ftr"><li>Wholesale</li></a>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-sell">
+                        <ul><a href="#">Sell</a>
+                            <a href="https://www.etsy.com/sell?ref=ftr"><li>Sell on etsy</li></a>
+                            <a href="https://www.etsy.com/teams?ref=ftr"><li>Teams</li></a>
+                            <a href="https://www.etsy.com/forums?ref=ftr"><li>Forums</li></a>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-about">
+                        <ul><a href="#">About</a>
+                            <a href="https://www.etsy.com/about?ref=ftr"><li>Etsy, Inc.</li></a>
+                            <a href="https://www.etsy.com/legal?ref=ftr"><li>Policies</li></a>
+                            <a href="https://investors.etsy.com/"><li>Investors</li></a>
+                            <a href="https://www.etsy.com/careers?ref=ftr"><li>Careers</li></a>
+                            <a href="https://www.etsy.com/press?ref=ftr"><li>Press</li></a>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-follow">
+                        <ul><a href="#">Follow Etsy</a>
+                            <li><img class="social-media" src="./assets/fb.svg">Facebook</li>
+                            <li><img class="social-media" src="./assets/instagram.svg">Instagram</li>
+                            <li><img class="social-media" src="./assets/pinterest.svg">Pinterest</li>
+                            <li><img class="social-media" src="./assets/twitter.svg">Twitter</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-help">
+                    <div class="help-center">
+                        <span class="help"><img src="./assets/question.svg">Need help? Visit the <a href="https://www.etsy.com/help?ref=ftr">help center</a></span>
+                    </div>
+                    <div class="locality">
+                        <span><img class="flag" src="./assets/norway.png"></span>
+                        <span class="country">Norway</span>
+                        <span class="language">English (US)</span>
+                        <span class="currency">$ (USD)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="terms">
+            </div>
+        </footer>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="./app/data.js"></script>
     <script src="./app/app.js"></script>
 </body>
