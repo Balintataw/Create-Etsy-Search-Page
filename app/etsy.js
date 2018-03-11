@@ -62,6 +62,7 @@ var welcomeScreen = document.querySelector('#welcome-screen');
                                             <span class="favorers">(${item.num_favorers})</span>
                                         </div>
                                         <div class="product-price">$${item.price}<span class="ship-info"></span></div>
+                                        <div class="creation-date" style="display:none;">${item.original_creation_tsz}</div>
                                     </a>
                                 </div>`
                                 resultsBar.innerHTML = `"${item.category_path[0]}" (${data.count}) results`;

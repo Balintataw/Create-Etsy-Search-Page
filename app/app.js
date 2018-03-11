@@ -17,7 +17,8 @@ $(document).ready(function () {
         } else if (option === 'relevance') {
             alert('How do I calculate for relevance?')
         } else if (option === 'newest') {
-            alert('Filter for date created')
+            alert('Sorts by lowest original_creation_tsz')
+            sortByNewest(".creation-date")
         }
 
         //sort by lowest function
@@ -42,6 +43,21 @@ $(document).ready(function () {
                 a = Number(a.innerText.replace(/(^\$|,)/g,''));
                 b = Number(b.innerText.replace(/(^\$|,)/g,''));
                 return b - a 
+            })
+            $('#products').empty();
+            sortedArray.forEach(item => {
+                var pushThis = item.parentNode.parentNode
+                bollocks.appendChild(pushThis)
+            })
+        }
+
+        //sort by newest
+        function sortByNewest(sortTerm) {
+            var productsToBeSorted = document.querySelectorAll(sortTerm)
+            var sortedArray = Array.from(productsToBeSorted).sort((a, b) => {
+                a = Number(a.innerText.replace(/(^\$|,)/g,''));
+                b = Number(b.innerText.replace(/(^\$|,)/g,''));
+                return a - b 
             })
             $('#products').empty();
             sortedArray.forEach(item => {
