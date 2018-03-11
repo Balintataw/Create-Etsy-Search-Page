@@ -196,7 +196,7 @@ nav {
     margin-right: 10px;
     color: rgb(181, 181, 181);
     font-size: 0.8rem;
-    width: 15%;
+    width: 197px;
     height: 1729px;
     border: 1px solid rgb(181, 181, 181);
     border-radius:  3px;
@@ -295,7 +295,6 @@ nav {
 
 select {
     height: 26px;
-    /* width: 100%; */
     color: rgb(181, 181,181);
     background: transparent;
     border: none;
@@ -330,15 +329,11 @@ select {
     align-items:  center;
 }
 
-.sort-by-container span {
-    /* width: 80px; */
-}
-
 #welcome-screen {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 95%;
+    width: 96%;
     height: 250px;
     margin-left: 20px;
     background-color: rgb(250, 181, 117);
@@ -346,8 +341,16 @@ select {
 }
 
 .welcome-message {
+    display: flex;
     color: #FFF;
     font-size: 3rem;
+    align-items: center;
+    justify-content:  center;
+    padding: 20px;
+    width: 92%;
+    background-color: rgb(250, 181, 117);
+    border-radius: 3px;
+    height: 200px;
 }
 
 .welcome-message-ad {

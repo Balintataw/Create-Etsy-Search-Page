@@ -12,7 +12,7 @@ var welcomeScreen = document.querySelector('#welcome-screen');
 
     $(document).ready(function(){
         var welcomePage = function() {
-            welcomeScreen.innerHTML = `<div class="welcome-message">Welcome to Et-C, Search for anything</div>`
+            welcomeScreen.innerHTML = `<div class="welcome-message">Welcome to Et-C, Begin your shopping experience</div>`
         }()
         //search for whatever, it works
         $('#header-search').bind('submit', function() {
