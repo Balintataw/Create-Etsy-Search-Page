@@ -65,8 +65,8 @@
                     </li>
                 </ul>
             </nav>
-            <div class="guided-search">
-                <span class="guided-search-button">
+            <div id="guided-search">
+                <!-- <span class="guided-search-button">
                     <a href="">whiskey decanter</a></span>
                 <span class="guided-search-button">
                     <a href="">whiskey glasses</a></span>
@@ -85,7 +85,7 @@
                 <span class="guided-search-button lighter">
                     <a href="">whiskey gifts</a></span>
                 <span class="guided-search-button lighter">
-                    <a href="">whiskey shirt</a></span>
+                    <a href="">whiskey shirt</a></span> -->
             </div>
         </header>
 
@@ -214,13 +214,13 @@
             <div class="item-container">
 
                 <div class="results-count">
-                    <span>All Categories<img src=""></span>
+                    <span>All Categories ><img src=""></span>
                     <span id="results"></span>
                     <span style="float: right;">Sort by </span>
                 </div>
-                <div id="products" class="product-results-feed">
-                    
-                </div>
+                <div id="products" class="product-results-feed"></div>
+                <div id=welcome-screen></div>
+
             </div>
         </div>
 
@@ -300,12 +300,13 @@
             </div>
         </footer>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./app/data.js"></script>
-    <script src="./app/app.js"></script>
+    <!-- <script src="./app/data.js"></script> -->
+    <!-- <script src="./app/app.js"></script> -->
+    <script src="./app/etsy.js"></script>
 </body>
 </html>

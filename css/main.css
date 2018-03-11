@@ -60,7 +60,7 @@ form {
     border: 1px solid rgb(182, 181, 181);
     border-radius: 3px;
     outline: 0;
-    padding: 7px 0;
+    padding: 7px 0 7px 5px;
 }
 
 #btn-search {
@@ -154,20 +154,21 @@ nav {
 
         /* guided nav buttons */
 
-.guided-search {
+#guided-search {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 9px 0 9px 28px;
     height: 60px;
     width: 100%;
+    overflow: hidden;
 }
 
 .guided-search-button {
     background-color: rgb(250, 181, 117);
     border: 1px solid rgb(214, 143, 76);
     padding: 10px 13px;
-    margin: 0 5px;
+    margin: 0px 6px;
     border-radius: 3px;
 }
 
@@ -177,7 +178,7 @@ nav {
     font-size: 0.8rem;
 }
 
-.lighter {
+.guided-search-button:last-child {
     background-color: rgb(253, 206, 161);
 }
 
@@ -308,6 +309,27 @@ select {
     padding: 5px 0 10px 0;
 }
 
+#welcome-screen {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: 250px;
+    margin-left: 20px;
+    background-color: rgb(250, 181, 117);
+    border-radius: 3px;
+}
+
+.welcome-message {
+    color: #FFF;
+    font-size: 3rem;
+}
+
+.welcome-message a {
+    color: #FFF;
+    text-decoration: none;
+}
+
 .product-results-feed {
     position: relative;
     display: flex;
@@ -431,6 +453,7 @@ select {
     flex-direction: column;
     flex-wrap: wrap;
     margin-left:20%;
+    margin-bottom: 30px;
     max-height: 200px;
 }
 
@@ -493,6 +516,7 @@ footer {
 .footer-nav a {
     text-decoration: none;
     font-size: 0.9rem;
+    color: rgb(91, 91, 91);
 }
 
 .footer-nav li {

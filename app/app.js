@@ -2,7 +2,8 @@ $(document).ready(function () {
 
 //------------Creates initial product listing
     var bollocks = document.querySelector('#products');
-    var searchTerm = document.querySelector('#search-field').value.toLowerCase();
+    var welcomeScreen = document.querySelector('#welcome-screen');
+    // var searchTerm = document.querySelector('#search-field').value.toLowerCase();
     var resultsBar = document.querySelector('#results');
     var relatedItems = document.querySelector('#related-items');
     var relatedTagsContainer = document.querySelector('#related-tags-container');
@@ -39,62 +40,21 @@ $(document).ready(function () {
                             <div class="product-price">$${item.price}<span class="ship-info"></span></div>
                         </a>
                     </div>`
-        })
-        productData.forEach(item => bollocks.innerHTML += item);
-        resultsBar.innerHTML = `"${searchTerm}" (${productData.length}) results`;
-        relatedItems.innerHTML = `Related to ${searchTerm}`;
-    }
-
-// -------------Header Search bar functionality
-
-    $('#header-search').submit(function(e) {
-        e.preventDefault();
-        search(searchTerm);
-        $('#header-search')[0].reset();
-    })
-    
-    var search = function(searchTerm) {
-        // populates with searched for products
-        var searchTerm = document.querySelector('#search-field').value;
-        var searchData = items.results.filter(item => {
-            let title = item.title.toLowerCase();
-            if (title.indexOf(searchTerm) > -1) {
-                return true
-            } else {
-                return false
-            }
-        })
-        //populates related items by search term
-        searchData.forEach(item => {
-            var selectedTags = item.tags.filter(tag => {
-                if (tag.indexOf(searchTerm) > -1) {
-                    return true
-                } else {
-                    return false
-                }
-            })
-            selectedTags.forEach(elem => {
-                relatedTagsContainer.innerHTML +=  `
-                                                   <div class="related-tag">
-                                                       <div>${elem}</div>
-                                                   </div>
-                                                  `
-            })
-        })
-        
-        $('#products').empty();
-        populateProducts(searchData, searchTerm);
-        
+                });
+                productData.forEach(item => bollocks.innerHTML += item);
+                resultsBar.innerHTML = `"${searchTerm}" (${productData.length}) results`;
+                relatedItems.innerHTML = `Related to ${searchTerm}`;
     }
 
     populateProducts(items.results);
 
-    // pushes to recently viewed items
+    var welcomePage = function() {
+        welcomeScreen.innerHTML = `<div class="welcome-message">Welcome to Et-C
+                                                             Search for anything</div>`
+    }
 
-    
 });
 
-//--------------product results bar
 
 
 
