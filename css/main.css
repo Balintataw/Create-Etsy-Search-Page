@@ -51,7 +51,6 @@ header {
 form {
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     width: 550px;
     height: 35px;
 }
@@ -192,7 +191,6 @@ nav {
 
 .sidebar {
     display: flex;
-    /* justify-content: flex-start; */
     margin-left: 32px;
     margin-right: 10px;
     color: rgb(181, 181, 181);
@@ -212,10 +210,6 @@ nav {
     padding: 10px;
     margin: 0 5px;
     border-bottom: 1px solid rgb(181, 181, 181);
-}
-
-#sidebar-form ul {
-    /* padding-bottom: 10px; */
 }
 
 .sidebar a {
@@ -296,6 +290,7 @@ nav {
 select {
     height: 35px;
     width: 100%;
+    color: rgb(181, 181,181);
 }
 
         /* product feed styles */
@@ -306,14 +301,23 @@ select {
     width: 100%;
 }
 
+.results-count {
+    margin-left: 20px;
+    width: 95%;
+    font-size: 0.8rem;
+    padding: 5px 0 10px 0;
+}
+
 .product-results-feed {
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 100%;
+    width: 99%;
 }
 
 .product-item-wrapper {
+    position: relative;
     width: 23%;
     padding-bottom: 30px;
 }
@@ -324,14 +328,25 @@ select {
 }
 
 .item-image {
+    position: relative;
     width: 100%;
     border-radius: 3px;
-    transition:box-shadow 400ms;
+    transition:box-shadow 200ms;
 }
 
 .item-image:hover {
     box-shadow: 2px 1px 5px 2px rgb(181, 181, 181);
+}
 
+.product-item-wrapper:hover::before {
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../assets/heart.png);
+    z-index: 10;
 }
 
 .product-name {
@@ -398,6 +413,46 @@ select {
     background-position: 0 0;
     background: url('../assets/full_star.png') 0 -16px;
     background-size: cover;
+}
+
+        /* related items section */
+
+#related-items {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-top:  30px;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+#related-tags-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left:20%;
+    max-height: 200px;
+}
+
+.related-tag {
+    display: flex;
+    align-items: center;
+    flex-wrap:  wrap;
+    padding:  5px 10px;
+    font-size: 0.8rem;
+    color: rgb(181, 181, 181);
+}
+
+.recently-viewed-container {
+    display: flex;
+    font-size: 1.2rem;
+    padding:10px 0;
+    border-top: 1px solid rgb(181, 181, 181);
+}
+
+.viewed-title {
+    padding: 5px 0;
+    margin-left: 32px;
 }
 
 

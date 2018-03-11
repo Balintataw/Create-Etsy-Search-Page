@@ -216,6 +216,7 @@
                 <div class="results-count">
                     <span>All Categories<img src=""></span>
                     <span id="results"></span>
+                    <span style="float: right;">Sort by </span>
                 </div>
                 <div id="products" class="product-results-feed">
                     
@@ -223,9 +224,12 @@
             </div>
         </div>
 
-        <div class="related-items">related items section</div>
+        <div id="related-items"></div>
+        <div id="related-tags-container"></div>
 
-        <div class="recently-viewed">recently viewed section</div>
+        <div class="recently-viewed-container">
+            <div class="viewed-title"><h3>Recently Viewed</h3></div>
+        </div>
 
         <footer>
             <div class="footer-info">
@@ -300,6 +304,7 @@
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./app/data.js"></script>
     <script src="./app/app.js"></script>
 </body>

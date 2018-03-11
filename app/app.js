@@ -2,14 +2,17 @@ $(document).ready(function () {
 
 //------------Creates initial product listing
     var bollocks = document.querySelector('#products');
-    var searchTerm = document.querySelector('#search-field').value;
+    var searchTerm = document.querySelector('#search-field').value.toLowerCase();
     var resultsBar = document.querySelector('#results');
+    var relatedItems = document.querySelector('#related-items');
+    var relatedTagsContainer = document.querySelector('#related-tags-container');
+    var imageTags = document.getElementsByClassName('.image-tag');
     
 
-    function populateProducts(array) {
+    function populateProducts(array, searchTerm) {
         var productData = array.map(item => {
             return `<div class="product-item-wrapper">
-                        <a href="${item.url}">
+                        <a href="${item.url}" class="image-tag">
                             <img class="item-image" src="${item.Images[0].url_170x135}" />
                             <div class="product-name">${item.title}</div>
                             <div class="product-maker">${item.Shop.shop_name}</div>
@@ -38,13 +41,12 @@ $(document).ready(function () {
                     </div>`
         })
         productData.forEach(item => bollocks.innerHTML += item);
-        resultsBar.innerHTML = `${searchTerm} (${productData.length})`;
+        resultsBar.innerHTML = `"${searchTerm}" (${productData.length}) results`;
+        relatedItems.innerHTML = `Related to ${searchTerm}`;
     }
 
 // -------------Header Search bar functionality
 
-    // document.querySelector('#header-search').addEventListener("onsubmit", alert(searchTerm));
-    
     $('#header-search').submit(function(e) {
         e.preventDefault();
         search(searchTerm);
@@ -52,27 +54,44 @@ $(document).ready(function () {
     })
     
     var search = function(searchTerm) {
+        // populates with searched for products
         var searchTerm = document.querySelector('#search-field').value;
         var searchData = items.results.filter(item => {
-            // console.log(searchTerm)
-            if (item.title.indexOf(searchTerm) > -1) {
+            let title = item.title.toLowerCase();
+            if (title.indexOf(searchTerm) > -1) {
                 return true
             } else {
                 return false
             }
         })
-
-        // console.log(searchData.length)
-
-        $('#products').empty();
+        //populates related items by search term
+        searchData.forEach(item => {
+            var selectedTags = item.tags.filter(tag => {
+                if (tag.indexOf(searchTerm) > -1) {
+                    return true
+                } else {
+                    return false
+                }
+            })
+            selectedTags.forEach(elem => {
+                relatedTagsContainer.innerHTML +=  `
+                                                   <div class="related-tag">
+                                                       <div>${elem}</div>
+                                                   </div>
+                                                  `
+            })
+        })
         
-        // console.log(searchData);
-        populateProducts(searchData)
+        $('#products').empty();
+        populateProducts(searchData, searchTerm);
+        
     }
 
+    populateProducts(items.results);
 
-populateProducts(items.results);
+    // pushes to recently viewed items
 
+    
 });
 
 //--------------product results bar
