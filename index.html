@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -213,10 +214,20 @@
 
             <div class="item-container">
 
-                <div class="results-count">
-                    <span>All Categories ><img src=""></span>
-                    <span id="results"></span>
-                    <span style="float: right;">Sort by </span>
+                <div class="results-sort-wrapper">
+                    <div class="results-container">
+                        <span>All Categories ><img src=""></span>
+                        <span id="results"></span>
+                    </div>
+                    <div class="sort-by-container">
+                        <span>Sort by :</span>
+                        <select name="" id="sort-menu">
+                            <option value="" class="sort-option" id="relevance">relevance</option>
+                            <option value="" class="sort-option" id="price-high">price highest</option>
+                            <option value="" class="sort-option" id="price-low">price lowest</option>
+                            <option value="" class="sort-option" id="recent">newest</option>
+                        </select>
+                    </div>
                 </div>
                 <div id="products" class="product-results-feed"></div>
                 <div id=welcome-screen></div>
@@ -306,7 +317,7 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <!-- <script src="./app/data.js"></script> -->
-    <!-- <script src="./app/app.js"></script> -->
+    <script src="./app/app.js"></script>
     <script src="./app/etsy.js"></script>
 </body>
 </html>

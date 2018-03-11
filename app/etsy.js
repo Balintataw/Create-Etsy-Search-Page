@@ -84,7 +84,7 @@ var welcomeScreen = document.querySelector('#welcome-screen');
                                     }                                   
                                 })           
                                 relatedItems.innerHTML = `Related to ${terms}`;  
-                                welcomeScreen.innerHTML = `<div class="welcome-message"><a href="www.jossendal.com">Sponsored by Jossendal Development</a></div`
+                                welcomeScreen.innerHTML = `<div class="welcome-message-ad">Sponsored by <a href="https://www.jossendal.com">Jossendal Development</a></div`
                                                            
                             });
                         } else {
