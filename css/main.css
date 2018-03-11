@@ -197,7 +197,7 @@ nav {
     color: rgb(181, 181, 181);
     font-size: 0.8rem;
     width: 15%;
-    height: 1756px;
+    height: 1729px;
     border: 1px solid rgb(181, 181, 181);
     border-radius:  3px;
 }
@@ -213,6 +213,10 @@ nav {
     border-bottom: 1px solid rgb(181, 181, 181);
 }
 
+#sidebar-form div:last-child {
+    border: none;
+}
+
 .sidebar a {
     font-size: 0.9rem;
     text-decoration: none;
@@ -226,7 +230,7 @@ nav {
 }
 
 .sidebar li {
-    padding: 5px 0 0 10px;
+    padding: 3.5px 0 1.5px 10px;
 }
 
 .sidebar-search-bars {
@@ -249,6 +253,7 @@ nav {
     position: relative;
     top: -6px;
     padding: 18.5px;
+    outline:  0;
 }
 
 #btn-location:before {
