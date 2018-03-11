@@ -1,3 +1,7 @@
+###CURRENT STATUS
+* At this stage, the search bar works, the sort function works for everything except relevance, side-bar is not connected to API
+* 
+
 ### Learning Objectives
 
 After completing this assignment, you should:
