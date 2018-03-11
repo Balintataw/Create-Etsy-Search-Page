@@ -294,6 +294,7 @@ select {
     color: rgb(181, 181,181);
     background: transparent;
     border: none;
+    outline:  0;
 }
 
         /* product feed styles */

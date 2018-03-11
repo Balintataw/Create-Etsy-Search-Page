@@ -100,8 +100,9 @@ var welcomeScreen = document.querySelector('#welcome-screen');
             return false;
         })
     });
-
+    
 })(jQuery);
+
 
 
 // function performGetRequest1() {
