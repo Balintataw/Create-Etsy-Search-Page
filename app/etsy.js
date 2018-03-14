@@ -19,7 +19,7 @@ var welcomeScreen = document.querySelector('#welcome-screen');
             var api_key = 'avsf5ap11hd1crffrchy5xmt';
             terms = $('#search-field').val();
             etsyURL = "https://openapi.etsy.com/v2/listings/active.js?keywords="+
-                terms+"&limit=24&includes=Images:1&api_key="+api_key;
+                terms+"&limit=24:1&api_key="+api_key;
 
             // $('#products').empty();
             $('#welcome-screen').empty();
@@ -35,6 +35,7 @@ var welcomeScreen = document.querySelector('#welcome-screen');
                         $('#products').empty();
                         if (data.count > 0) {
                             $.each(data.results, function(i,item) {
+                                console.log(data.results[0])
                                 bollocks.innerHTML += 
                                 `<div class="product-item-wrapper">
                                     <a href="${item.url}" class="image-tag">
